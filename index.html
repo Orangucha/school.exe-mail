@@ -2,57 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>school.exe Sign Up Form</title>
+  <title>School.exe – Join Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
-      background: #f8f8f8;
+      font-family: 'Share Tech Mono', monospace;
+      background: url(https://i.postimg.cc/Gmjyjq58/HTMl-BG.png.jpg) no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      color: #00ffcc;
     }
+
     form {
-      background: white;
+      background: rgba(0, 0, 0, 0.8);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      width: 100%;
+      box-shadow: 0 0 20px #00ffcc88;
       max-width: 400px;
+      width: 100%;
+      animation: fadeIn 1.5s ease;
     }
+
     h2 {
       margin-top: 0;
+      color: #ff0044;
+      text-align: center;
+      text-shadow: 0 0 5px #ff0044aa;
     }
+
     input {
       width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #333;
+      background: #111;
+      color: #00ffcc;
       border-radius: 6px;
+      transition: 0.3s;
     }
+
+    input:focus {
+      border-color: #00ffcc;
+      outline: none;
+      background: #000;
+    }
+
     button {
-      background: #222;
+      background: #ff0044;
       color: white;
       padding: 12px;
       border: none;
       width: 100%;
       border-radius: 6px;
       font-size: 16px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #ff0044aa;
+      cursor: pointer;
     }
+
+    button:hover {
+      background: #cc0033;
+      box-shadow: 0 0 20px #ff0044ee;
+    }
+
     p {
       text-align: center;
-      margin-top: 10px;
-      font-style: italic;
+      margin-top: 12px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <form action="https://formspree.io/f/meokkjwz" method="POST">
-    <h2>🎮 Sign Up for Game Updates</h2>
-    <input type="email" name="email" placeholder="Your Email">
-    <input type="text" name="discord" placeholder="Your Discord">
+    <h2>👁🃏 School.exe – Sign Up</h2>
+    <input type="email" name="email" placeholder="Enter your Email" required>
+    <input type="text" name="discord" placeholder="Your Discord ID" required>
     <button type="submit">Notify Me</button>
-    <p>You won’t regret it 💌</p>
+    <p>Darkness arrives. You in?</p>
   </form>
 </body>
 </html>
